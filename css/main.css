@@ -307,36 +307,118 @@ template {
 [hidden] {
   display: none; }
 
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  padding: 0; }
+
+.header {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, #112537), color-stop(49.9%, #fff));
+  background: -o-linear-gradient(left, #112537 50.1%, #fff 49.9%);
+  background: linear-gradient(to right, #112537 50.1%, #fff 49.9%); }
+
 .container {
+  position: relative;
   max-width: 1170px;
   margin: 0 auto; }
 
-.header__left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #112537;
-  opacity: 0.97;
-  width: 50%; }
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 15px; }
 
 .header__logo {
   position: absolute;
-  top: 15px;
   left: calc(50% - 32px);
-  z-index: 500; }
+  z-index: 9999; }
 
 .header__phone {
-  color: #000; }
+  position: relative;
+  font-size: 16px;
+  color: #252525; }
+  .header__phone::before {
+    content: url("/img/header-phone.png");
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 35px;
+    height: 35px; }
 
-.header {
-  margin-top: 55px;
-  height: 400px;
-  background: url("/img/header_bg-pc.jpg") no-repeat center/cover; }
+.header__middle {
+  position: relative;
+  padding: 170px 0 0 100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, rgba(17, 37, 55, 0.97)), color-stop(49.9%, transparent)), url("/img/header_bg-pc.jpg") no-repeat center/cover;
+  background: -o-linear-gradient(left, rgba(17, 37, 55, 0.97) 50.1%, transparent 49.9%), url("/img/header_bg-pc.jpg") no-repeat center/cover;
+  background: linear-gradient(to right, rgba(17, 37, 55, 0.97) 50.1%, transparent 49.9%), url("/img/header_bg-pc.jpg") no-repeat center/cover;
+  color: #fff; }
+
+.header__title {
+  font-size: 61px; }
+
+.header__description {
+  font-size: 14px; }
+
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background-color: #f8a25a;
+  font-family: 'Roboto', sans-serif;
+  /* put your font-family */
+  font-size: 15px;
+  padding: 20px 0;
+  width: 280px;
+  border-radius: 2px;
+  overflow: hidden; }
+
+.effect.effect-1 {
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+.effect.effect-1:before {
+  content: url(/img/header_btn-arrow.png);
+  font-size: 15px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 15px;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+.effect.effect-1:hover {
+  text-indent: -20px; }
+
+.effect.effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px; }
 
 .mobile-menu {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,13 +428,8 @@ template {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0 16px;
-  top: 0;
-  background-color: #112537;
-  left: 0;
-  right: 0;
-  height: 55px;
-  z-index: 9999999; }
+  width: 50%;
+  background-color: #112537; }
 
 .mobile-menu__btn {
   position: relative;
@@ -366,7 +443,7 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   width: 35px;
-  height: 30px;
+  height: 20px;
   cursor: pointer;
   -webkit-transition: .4s;
   -o-transition: .4s;
@@ -414,7 +491,6 @@ template {
           justify-content: center;
   top: 50px;
   left: 0;
-  right: 0;
   z-index: 999;
   height: 0;
   width: 50%;
@@ -457,7 +533,7 @@ template {
           transition-delay: 0s; }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__container {
-  height: 100%;
+  height: 100vh;
   width: 50%;
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
@@ -480,14 +556,6 @@ template {
       transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
 
-*,
-:after,
-:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-a {
-  text-decoration: none; }
-
-ul {
-  padding: 0; }
+main {
+  margin-top: 50px;
+  height: 300px; }
