@@ -313,60 +313,28 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  font: 16px "Raleway Light", serif; }
+
+img {
+  width: 100%;
+  max-width: 100%; }
+
 a {
   text-decoration: none; }
 
 ul {
   padding: 0; }
 
-.effect {
-  text-align: center;
-  display: inline-block;
+.header {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, #112537), color-stop(49.9%, #fff));
+  background: -o-linear-gradient(left, #112537 50.1%, #fff 49.9%);
+  background: linear-gradient(to right, #112537 50.1%, #fff 49.9%); }
+
+.container {
   position: relative;
-  text-decoration: none;
-  color: #fff;
-  background-color: #f8a25a;
-  font-family: 'Roboto', sans-serif;
-  /* put your font-family */
-  font-size: 15px;
-  padding: 20px 0;
-  width: 280px;
-  border-radius: 2px;
-  overflow: hidden; }
-
-.effect.effect-1 {
-  -webkit-transition: all 0.2s linear 0s;
-  -o-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s; }
-
-.effect.effect-1:before {
-  content: url(/img/header_btn-arrow.png);
-  font-size: 15px;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  right: 15px;
-  top: 0;
-  opacity: 0;
-  height: 100%;
-  width: 40px;
-  -webkit-transition: all 0.2s linear 0s;
-  -o-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s; }
-
-.effect.effect-1:hover {
-  text-indent: -20px; }
-
-.effect.effect-1:hover:before {
-  opacity: 1;
-  text-indent: 0px; }
+  max-width: 1170px;
+  margin: 0 auto; }
 
 .mobile-menu {
   display: -webkit-box;
@@ -506,16 +474,6 @@ ul {
       transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
 
-.header {
-  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, #112537), color-stop(49.9%, #fff));
-  background: -o-linear-gradient(left, #112537 50.1%, #fff 49.9%);
-  background: linear-gradient(to right, #112537 50.1%, #fff 49.9%); }
-
-.container {
-  position: relative;
-  max-width: 1170px;
-  margin: 0 auto; }
-
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,6 +491,7 @@ ul {
 .header__phone {
   position: relative;
   font-size: 16px;
+  font-weight: 600;
   color: #252525; }
   .header__phone::before {
     content: url("/img/header-phone.png");
@@ -552,9 +511,8 @@ ul {
 
 .header__title {
   width: 356px;
-  line-height: 61px;
-  font-weight: 800;
-  font-size: 61px; }
+  font: 700 61px/61px "Playfair Display", serif;
+  letter-spacing: 4px; }
 
 .header__title:hover {
   -webkit-transform: scale(1);
@@ -584,10 +542,61 @@ ul {
     clip-path: polygon(135% 110%, 100% 0, 0 0, 0 100%); } }
 
 .header__description {
-  font-size: 14px; }
+  margin: 25px 0;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.5px; }
 
-.header__btn {
-  background: #f8a25a; }
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background-color: #f8a25a;
+  font-family: 'Releway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 20px 0;
+  width: 280px;
+  border-radius: 2px;
+  overflow: hidden; }
+
+.effect.effect-1 {
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+.effect.effect-1:before {
+  content: url(/img/header_btn-arrow.png);
+  font-size: 15px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 15px;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+.effect.effect-1:hover {
+  text-indent: -20px; }
+
+.effect.effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px; }
 
 .header__social {
   height: 100px;
