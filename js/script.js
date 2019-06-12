@@ -1,9 +1,9 @@
 'use strict';
 function writeTextByJS(id, text, speed) {
-	var ele = document.getElementById(id),
+	let ele = document.getElementById(id),
 		txt = text.join('').split('');
-
-	var interval = setInterval(function() {
+	console.log(txt);
+	let interval = setInterval(function() {
 		if (!txt[0]) {
 			return clearInterval(interval);
 		}
