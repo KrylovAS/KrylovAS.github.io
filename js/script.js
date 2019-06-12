@@ -14,4 +14,4 @@ function writeTextByJS(id, text, speed) {
 	return false;
 }
 
-writeTextByJS('demo', [ 'Воплотим в жизнь интерьер, который будет\n', 'радовать лаконичностью и уютом\n' ], 250);
+writeTextByJS('demo', [ 'Воплотим в жизнь интерьер, который будет\n', 'радовать лаконичностью и уютом\n' ], 220);
