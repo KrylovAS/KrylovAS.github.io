@@ -314,7 +314,8 @@ template {
           box-sizing: border-box; }
 
 body {
-  font: 16px "Raleway Light", serif; }
+  font: 16px "Raleway", sans-serif;
+  letter-spacing: 1px; }
 
 img {
   width: 100%;
@@ -326,15 +327,15 @@ a {
 ul {
   padding: 0; }
 
-.header {
-  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, #112537), color-stop(49.9%, #fff));
-  background: -o-linear-gradient(left, #112537 50.1%, #fff 49.9%);
-  background: linear-gradient(to right, #112537 50.1%, #fff 49.9%); }
-
 .container {
   position: relative;
   max-width: 1170px;
   margin: 0 auto; }
+
+.header {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50.1%, #112537), color-stop(49.9%, #fff));
+  background: -o-linear-gradient(left, #112537 50.1%, #fff 49.9%);
+  background: linear-gradient(to right, #112537 50.1%, #fff 49.9%); }
 
 .mobile-menu {
   display: -webkit-box;
@@ -621,6 +622,33 @@ ul {
 .facebook::before {
   content: url("/img/001-facebook.png"); }
 
-main {
-  margin-top: 50px;
-  height: 300px; }
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 500px; }
+
+.features__block {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%; }
+  .features__block:nth-child(2n) {
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+
+.feature__number {
+  font: 700 90px "Playfair Display", sans-serif;
+  color: rgba(254, 159, 82, 0.342); }
+
+.feature__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a292f; }
+
+.feature__desc {
+  padding-right: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #838383;
+  letter-spacing: 1px; }
