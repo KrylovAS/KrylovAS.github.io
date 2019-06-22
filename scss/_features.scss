@@ -1,31 +1,31 @@
 .features {
-	display: flex;
-	justify-content: space-around;
-	height: 500px;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
 }
 
 .features__block {
-	flex-basis: 24%;
-	&:nth-child(2n) {
-		align-self: flex-end;
-	}
+    flex-basis: 24%;
+    &:nth-child(2n) {
+        align-self: flex-end;
+    }
 }
 
 .feature__number {
-	font: 700 90px "Playfair Display", sans-serif;
-	color: rgba(254, 159, 82, 0.342);
+    font: 700 90px "Playfair Display", sans-serif;
+    color: rgba(254, 159, 82, 0.342);
 }
 
 .feature__title {
-	font-size: 22px;
-	font-weight: 700;
-	color: #1a292f;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a292f;
 }
 
 .feature__desc {
-	padding-right: 20px;
-	font-size: 16px;
-	font-weight: 300;
-	color: #838383;
-	letter-spacing: 1px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #838383;
+    letter-spacing: 1px;
 }
